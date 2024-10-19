@@ -1,4 +1,5 @@
 #include <assert.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stddef.h>
@@ -18,5 +19,5 @@ void init_document(struct document *doc, const char *filename)
 
     const char *section = strrchr(basename, '.') + 1;
     doc->section = atoi(section);
-    doc->filename = filename;
+    doc->file = fopen(filename, "r");
 }

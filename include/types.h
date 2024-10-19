@@ -1,6 +1,8 @@
 #ifndef _TYPES_H_
 #define _TYPES_H_
 
+#include <stdio.h>
+
 struct document {
     char *date;
     char *title;
@@ -9,7 +11,7 @@ struct document {
     char *description;
     int section;
 
-    const char *filename;
+    FILE *file;
 };
 
 #endif
